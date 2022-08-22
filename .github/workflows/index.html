@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        
+        <script src="JS/script5.js"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <ul>
+        <li><a class="index.html" href="index.html">Home</a></li>
+        <li><a onclick="displayTable(true)">Child</a></li>
+       <li><a onclick="displayTable(false)">Adult</a></li>
+       <li><span><input type="text" id="search"></span><span id="span"><button onclick="searchUser()">Search</button></span</li>
+        <li style="vertical-align: right;"><a onclick="logoutSession();">LogOut</a></li>
+        <p id="notifyLogout"></p>
+    </ul>
+    <table id="table">
+        <tr>
+            <th> S.No </th>
+            <th> Name </th>
+            <th> Address </th>
+            <th> Age </th>
+            <th> Mobile Number </th>
+            <th> Email </th>
+        </tr>
+    </table>
+    <div id="div">
+        <p id="notifyRecord">
+        </p>
+    </div>
+    
+    <div id="content">
+        
+        
+        <div id="main">
+            <h1 class="heading"> Login Here </h1>
+            <form class="formData" id="formReset" name="contact">
+                <div>
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" placeholder="Enter name" maxlength="32" onkeydown="inputCharactersCount_Name()" onblur="hideInputCharactersCount_Name()"required>
+                    <span id="notifyName"></span>
+                </div>
+                <div>
+                    <label for="add">Address</label>
+                    <br><textarea id="add" cols="20" rows="5" name="add" placeholder="Enter Address" onkeydown="inputCharactersCount_Address()" onblur="hideInputCharactersCount_Address()"required></textarea>
+                    <span id="notifyAddress"></span>
+                </div>
+        <div>
+            <label for="dob">DOB</label>
+            <br><input type="date" id="dob" name="dob" onblur="inputDOB()" required>
+            <span id="notifyAge"></span>
+        </div>
+        <div><label for="mob">Mobile Number</label>
+            <br><input type="text" id="mob" name="mob" placeholder="Enter mobile number" maxlength="10" required>
+            <span id="notifyMob"></span>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <br><input type="email" id="email" name="email" placeholder="Enter mailid" onblur="validEmail()"required>
+            <span id="notifyMail"></span>
+        </div>
+        <div>
+            <button type="reset" onclick="submitData()" value="Submit" > Submit</button>
+        </div>
+        <p id="notifySubmit"></p>
+    </form>
+</div>
+<table id="tableRecord">
+    <th>Name</th>
+    <th>Address</th>
+    <th>Age</th>
+    <th>Mobile Number</th>
+    <th>Mail</th>
+</table>
+
+</body>
+</html>
